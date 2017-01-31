@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Created by Fisher on 1/31/2017.
  */
-public class RxJavaExample {
+public class RxJavaExample1 {
 
     public static void main(String[] args) {
         List<String> list = Arrays.asList("Android", "Ubuntu", "Mac OS");
@@ -18,7 +18,11 @@ public class RxJavaExample {
         listObservable.subscribe(new Observer<List<String>>() {
 
             @Override
-            public void onComplete() {}
+            public void onComplete() {
+
+                System.out.println("completed");
+
+            }
 
             @Override
             public void onError(Throwable e) {}
