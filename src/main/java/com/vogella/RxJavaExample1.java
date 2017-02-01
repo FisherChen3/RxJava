@@ -1,8 +1,9 @@
 package com.vogella;
 
-import io.reactivex.Observable;
-import io.reactivex.Observer;
-import io.reactivex.disposables.Disposable;
+
+
+import rx.Observable;
+import rx.Observer;
 
 import java.util.Arrays;
 import java.util.List;
@@ -18,7 +19,7 @@ public class RxJavaExample1 {
         listObservable.subscribe(new Observer<List<String>>() {
 
             @Override
-            public void onComplete() {
+            public void onCompleted() {
 
                 System.out.println("completed");
 
@@ -32,10 +33,6 @@ public class RxJavaExample1 {
                 System.out.println(list);
             }
 
-            @Override
-            public void onSubscribe(Disposable disposable) {
-
-            }
         });
     }
 }
